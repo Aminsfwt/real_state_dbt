@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: RAW_DATA
+    database: Realestate_DB
+    schema: RAW_DATA
+    tables:
+      - name: agents
+      - name: leads
+      - name: marketing_campaign
+      - name: properties 
+      - name: transactions
+      - name: test
