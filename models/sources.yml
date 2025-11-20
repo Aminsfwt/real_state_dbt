@@ -7,7 +7,6 @@ sources:
     tables:
       - name: agents
       - name: leads
-      - name: marketing_campaign
+      - name: marketing_campaigns
       - name: properties 
       - name: transactions
-      - name: test

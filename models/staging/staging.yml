@@ -1,0 +1,107 @@
+version: 2 
+
+models: 
+  ## agents
+    - name: stg_agents 
+      description: working agents  
+      columns:
+        - name: agent_id
+          description: ID and primary key of the table
+          data_tests:
+            - not_null
+            - unique 
+
+  ## marketing_campaigns
+    - name: stg_marketing_campaigns 
+      description: all companies marketing campaigns
+      columns:
+        - name: campaign_id
+          description: ID and primary key of the table
+          data_tests:
+            - not_null
+            - unique
+        - name: marketing_channel 
+          description: all marketing channels
+          data_tests:
+            - accepted_values:
+                arguments:
+                  values: ['Print','SMS','Events','Offline','Partnerships','Radio','TV','Email','Online','Social Media']            
+  
+  ## leads  
+    - name: stg_leads 
+      description: all leads in the company
+      columns: 
+        - name: lead_id  
+          description: ID and primary key of the table
+          data_tests:
+            - not_null
+            - unique
+        - name: purchased  
+          description: flag to specify if the lead converted to cusstomer or not  
+          data_tests:
+            - accepted_values:
+                arguments:
+                  values: ['yes', 'no']
+        - name: campaign_id
+          description: "Foreign key to marketing_campaign table"
+          tests:
+            - relationships:
+                arguments:
+                  to: "{{ ref('stg_marketing_campaigns') }}"
+                  field: campaign_id
+        - name: agent_id
+          description: "Foreign key to agents table"
+          tests:
+            - relationships:
+                arguments:
+                  to: "{{ ref('stg_agents') }}"
+                  field: agent_id
+
+  ## properities
+    - name: stg_properties
+      description: "all properties owned by the company"
+      columns:
+        - name: property_id
+          description: ID and primary key of the table
+          data_tests:
+            - not_null
+            - unique
+        - name: availability_status
+          description: properity status
+          data_tests:
+            - accepted_values:
+                arguments:
+                  values: ['Available', 'Sold']
+
+  ## transactions
+    - name: stg_transactions 
+      description: all transactions in the company
+      columns: 
+        - name: transaction_id  
+          description: ID and primary key of the table
+          data_tests:
+            - not_null
+            - unique
+        - name: customer_id  
+          description: "Foreign key to leads table"
+          data_tests:
+            - relationships:
+                arguments:
+                  to: "{{ ref('stg_leads') }}"
+                  field: lead_id
+        - name: property_id
+          description: "Foreign key to marketing_campaign table"
+          tests:
+            - relationships:
+                arguments:
+                  to: "{{ ref('stg_properties') }}"
+                  field: property_id
+        - name: agent_id
+          description: "Foreign key to agents table"
+          tests:
+            - relationships:
+                arguments:
+                  to: "{{ ref('stg_agents') }}"
+                  field: agent_id
+
+      

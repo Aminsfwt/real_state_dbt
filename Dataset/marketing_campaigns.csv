@@ -1,0 +1,51 @@
+"campaign_id","campaign_name","campaign_type","start_date","end_date","target_leads_nums","actual_leads","budget","clicks","impressions","marketing_channel","governorate_name","campaign_status"
+CAMP001_CA,Family Homes Project CA,YouTube Campaign,2024-12-21,2025-05-07,2496.0,2891.0,504192.0,3237.0,43219.0,Radio,Cairo,Planning
+CAMP002_CA,Premium Villas Collection CA,Newspaper Ad,2024-09-28,2024-11-30,2561.0,2812.0,473785.0,3412.0,51155.0,Events,Cairo,Paused
+CAMP003_CA,Premium Villas Collection CA,Radio Ad,2024-11-07,2025-05-19,2749.0,2613.0,541553.0,4677.0,60745.0,Offline,Cairo,Active
+CAMP004_CA,Coastal Properties Expo CA,Email Marketing,2024-08-03,2024-09-28,2510.0,2464.0,459330.0,1403.0,30063.0,Email,Cairo,Completed
+CAMP005_GZ,Urban Living Revolution GZ,Partnership,2025-01-08,2025-06-16,2793.0,3311.0,597702.0,7071.0,104295.0,Email,Giza,Planning
+CAMP006_GZ,Future Cities Initiative GZ,SEO Campaign,2024-07-26,2024-10-23,2707.0,2886.0,571177.0,1554.0,46823.0,Print,Giza,Planning
+CAMP007_GZ,Compound Living Experience GZ,Radio Ad,2024-08-18,2024-09-22,2472.0,2196.0,491928.0,2304.0,39948.0,Print,Giza,Completed
+CAMP008_GZ,Sustainable Living Campaign GZ,Direct Mail,2025-03-26,2025-03-26,2451.0,2557.0,573534.0,2152.0,47717.0,Online,Giza,Active
+CAMP009_NC,Luxury Living Standards NC,Email Marketing,2024-12-29,2025-02-09,2863.0,2771.0,684257.0,2495.0,113952.0,SMS,New Administrative Capital,Paused
+CAMP010_NC,Property Investment Guide NC,Referral Program,2025-01-04,2025-03-22,2634.0,2394.0,484656.0,6065.0,95213.0,Email,New Administrative Capital,Completed
+CAMP011_NC,Luxury Living Standards NC,YouTube Campaign,2025-03-25,2025-04-29,3009.0,2897.0,689061.0,6200.0,111126.0,Events,New Administrative Capital,Paused
+CAMP012_NC,Sustainable Living Campaign NC,Real Estate Exhibition,2025-01-08,2025-03-05,2497.0,2574.0,469436.0,1499.0,46417.0,TV,New Administrative Capital,Paused
+CAMP013_AL,Real Estate Investment Summit AL,Social Media,2024-08-10,2024-09-21,2471.0,2905.0,471961.0,4320.0,95368.0,Offline,Alexandria,Paused
+CAMP014_AL,Luxury Living Standards AL,SMS Campaign,2025-02-09,2025-06-25,2612.0,2912.0,532848.0,2938.0,43604.0,Social Media,Alexandria,Active
+CAMP015_AL,Coastal Properties Expo AL,Instagram Marketing,2025-03-01,2025-03-01,2231.0,1969.0,414966.0,4130.0,56350.0,Email,Alexandria,Active
+CAMP016_AL,Family Homes Project AL,Content Marketing,2025-02-15,2025-02-15,2418.0,2164.0,418314.0,1486.0,34242.0,Partnerships,Alexandria,Active
+CAMP017_SZ,Urban Living Revolution SZ,TV Commercial,2025-01-05,2025-03-09,2538.0,2871.0,461916.0,5793.0,81835.0,Social Media,Sheikh Zayed,Completed
+CAMP018_SZ,Property Investment Guide SZ,TV Commercial,2024-09-07,2024-11-02,2266.0,1890.0,446402.0,1706.0,44545.0,Online,Sheikh Zayed,Completed
+CAMP019_NO,Family Homes Project NO,Social Media,2024-09-12,2024-09-12,2141.0,2085.0,453892.0,800.0,20482.0,Social Media,North Coast,Planning
+CAMP020_NO,Luxury Living Standards NO,YouTube Campaign,2025-02-18,2025-05-06,1972.0,1951.0,427924.0,4038.0,52859.0,SMS,North Coast,Paused
+CAMP021_HU,Luxury Properties Showcase HU,Instagram Marketing,2024-11-03,2024-11-03,2373.0,2196.0,450870.0,1054.0,22720.0,Email,Hurghada,Active
+CAMP022_HU,Home Ownership Made Easy HU,SEO Campaign,2024-12-21,2024-12-21,1948.0,1604.0,403236.0,1059.0,43068.0,Offline,Hurghada,Planning
+CAMP023_SH,Real Estate Market Update SH,Social Media,2024-11-01,2025-01-10,1850.0,1530.0,336700.0,1456.0,20867.0,Radio,Sharm El Sheikh,Paused
+CAMP024_SH,Home Ownership Made Easy SH,Radio Ad,2024-10-22,2024-12-17,1928.0,1691.0,420304.0,1270.0,25985.0,Offline,Sharm El Sheikh,Paused
+CAMP025_AS,Investment Opportunities AS,Open House,2024-10-20,2024-11-17,1882.0,1662.0,308648.0,1108.0,20609.0,Online,Asyut,Completed
+CAMP026_AS,Luxury Properties Showcase AS,Email Marketing,2024-12-29,2025-02-09,2145.0,2472.0,343200.0,3120.0,44905.0,TV,Asyut,Paused
+CAMP027_LU,Luxury Living Standards LU,Digital Marketing,2024-06-17,2024-08-12,2139.0,2251.0,322989.0,1057.0,41135.0,TV,Luxor,Paused
+CAMP028_LU,Real Estate Investment Summit LU,Billboard,2024-10-23,2025-01-08,2161.0,2553.0,287413.0,1410.0,51303.0,Online,Luxor,Completed
+CAMP029_AW,Coastal Properties Expo AW,Digital Marketing,2025-03-10,2025-03-10,1969.0,2342.0,336699.0,1033.0,38998.0,Events,Aswan,Active
+CAMP030_AW,Investment Opportunities AW,Digital Marketing,2024-10-11,2025-02-28,2182.0,2563.0,320754.0,2541.0,34298.0,Radio,Aswan,Active
+CAMP031_MN,Investment Opportunities MN,Social Media,2024-08-17,2024-09-28,2137.0,2453.0,299180.0,1305.0,38753.0,TV,Al Minya,Completed
+CAMP032_MN,Smart Living Campaign MN,Content Marketing,2024-08-24,2025-06-25,2171.0,2367.0,316966.0,944.0,24106.0,Online,Al Minya,Active
+CAMP033_SO,Property Investment Guide SO,Referral Program,2024-09-02,2024-12-08,1668.0,1521.0,236856.0,737.0,23563.0,Radio,Sohag,Active
+CAMP034_SO,Smart Home Solutions SO,Radio Ad,2025-01-26,2025-01-26,2048.0,2229.0,249856.0,869.0,30718.0,Email,Sohag,Active
+CAMP035_QE,Coastal Properties Expo QE,Direct Mail,2025-02-20,2025-04-17,2090.0,2463.0,321860.0,5224.0,90546.0,TV,Qena,Completed
+CAMP036_QE,Summer Real Estate Festival QE,Influencer Marketing,2025-03-05,2025-05-07,1729.0,2011.0,295659.0,855.0,25624.0,Print,Qena,Paused
+CAMP037_MA,Family Homes Project MA,YouTube Campaign,2025-03-28,2025-03-28,1656.0,1871.0,255024.0,2309.0,48729.0,Offline,Mansoura,Active
+CAMP038_MA,Dream Home Initiative MA,Referral Program,2025-03-07,2025-03-09,2173.0,1979.0,347680.0,1926.0,28495.0,Email,Mansoura,Active
+CAMP039_TA,Urban Living Revolution TA,Instagram Marketing,2024-06-27,2024-10-11,1657.0,1576.0,261806.0,610.0,24606.0,Social Media,Tanta,Planning
+CAMP040_TA,Home Ownership Made Easy TA,Content Marketing,2024-10-03,2024-12-19,1768.0,1429.0,245752.0,421.0,18803.0,Email,Tanta,Paused
+CAMP041_ZA,Apartment Lifestyle ZA,YouTube Campaign,2024-06-13,2024-07-25,1867.0,2031.0,224040.0,1681.0,24794.0,Radio,Zagazig,Paused
+CAMP042_ZA,Sustainable Living Campaign ZA,Facebook Ads,2024-12-18,2025-01-29,1971.0,1609.0,339012.0,1389.0,44537.0,Offline,Zagazig,Paused
+CAMP043_DA,Summer Real Estate Festival DA,Radio Ad,2024-10-25,2024-10-25,1906.0,1660.0,230626.0,967.0,34415.0,Email,Damietta,Active
+CAMP044_DA,Sustainable Living Campaign DA,Instagram Marketing,2024-06-22,2024-08-10,2058.0,1920.0,302526.0,3038.0,66349.0,Print,Damietta,Paused
+CAMP045_IS,Luxury Properties Showcase IS,Direct Mail,2024-11-17,2025-06-25,1955.0,2028.0,265880.0,2416.0,36063.0,Print,Ismailia,Planning
+CAMP046_IS,Smart Home Solutions IS,Facebook Ads,2024-10-06,2024-11-17,2030.0,1946.0,361340.0,1142.0,31547.0,Email,Ismailia,Completed
+CAMP047_PS,Luxury Living Standards PS,Social Media,2024-06-22,2024-12-01,1677.0,1807.0,246519.0,880.0,19928.0,Radio,Port Said,Planning
+CAMP048_PS,Luxury Living Standards PS,YouTube Campaign,2025-03-06,2025-05-15,2204.0,2510.0,385700.0,2774.0,41780.0,TV,Port Said,Paused
+CAMP049_SU,Future Cities Initiative SU,YouTube Campaign,2024-07-05,2024-08-24,2159.0,2526.0,382143.0,1897.0,49043.0,SMS,Suez,Planning
+CAMP050_SU,Summer Real Estate Festival SU,Direct Mail,2024-12-29,2025-01-26,2108.0,2468.0,297869.0,5016.0,118312.0,Events,Suez,Paused

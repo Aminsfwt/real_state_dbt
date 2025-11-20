@@ -34,5 +34,16 @@ models:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +schema: STAGING
+      +materialized: view 
+         
+    snapshot:
       +database: Realestate_DB
-      +materialized: view    
+      +schema: snapshots
+
+    warehouse:
+      +database: Realestate_DWH
+      +schema: analtycal_data
+      +materialized: table 
+
+
+
