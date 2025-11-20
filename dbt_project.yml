@@ -33,15 +33,17 @@ models:
   real_estate_snowflake:
     # Config indicated by + and applies to all files under models/example/
     staging:
+      +database: Realestate_DB
       +schema: STAGING
       +materialized: view 
          
     snapshot:
       +database: Realestate_DB
       +schema: snapshots
+      +materialized: table
 
     warehouse:
-      +database: Realestate_DWH
+      +database: Realestate_DB
       +schema: analtycal_data
       +materialized: table 
 

@@ -11,18 +11,18 @@ WITH fact_sales AS(
         (t.sale_price * (a.commission_rate )) AS commission_amount,
         ROUND(((t.sale_price - t.original_property_price) / t.sale_price * 100),2) AS profit_margin,
         CURRENT_TIMESTAMP() AS created_at
-    FROM {{ref('stg_transactions')}} AS t
+    FROM {{ref('stg_transactions')}} t
     JOIN {{ref('Dim_Agent')}} a
         ON t.agent_id = a.agent_id
     JOIN {{ref('Dim_Property')}} p
         ON t.property_id = p.property_id    
     JOIN {{ref('Dim_Date')}} d
         ON t.sale_date = d.full_date       
-    JOIN {{ref('Dim_Lead')}} AS l 
+    LEFT JOIN {{ref('Dim_Lead')}} l 
         ON t.customer_id = l.lead_id 
         AND l.purchased = 'yes'
-    JOIN {{ref('Dim_Campaign')}} c
-        ON l.campaign_id = c.campaign_id     
+    LEFT JOIN {{ref('Dim_Campaign')}} c
+        ON l.campaign_id = c.campaign_id    
 )
 
 SELECT

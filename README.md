@@ -25,22 +25,83 @@ Enable tracking of lead-to-sale conversion, agent performance, and property tren
 
 ## Identifying required tables from ERD
 
-![ERD](/Images/REALESTATE_DB ERD.png)
+![ERD](./Images/REALESTATE_DB%20ERD.png)
+
+## Design Steps
+- We used Inmon model (put all the information in one place (Data Warehouse)) for building Galaxy Schema.
+
+- Galaxy Schema: type of modelss that contains many Fact tables.
+
+in this project we have 2 fct tables
+- FACT_SALES: Transaction type with grain set at a single transaction (the low level).
+- FACT_TIMELINE: Accumulative fact table that stores the full procees per one sale.  
+
+#### Build the Conceptual Data Model (Business-Level Model):
+
+### Entities:
+
+- Customer
+
+- Lead
+
+- Property
+
+- Agent
+
+- Marketing Campaign
+
+- Sale Transaction
+
+### Relationships:
+
+- Customer → submits → Lead
+
+- Lead → converts into → Sale Transaction
+
+- Property → is sold in → Sale Transaction
+
+- Agent → manages → Sale Transaction
+
+- Campaign → generates → Lead
+
+
+#### Physical Data Model
+![Data Model](./Images/Data%20Warehouse%20Modeling.png)
+
+### Load and Transform data into Snowflake using Data Build Tool (dbt) 
+
+#### In snowflake:
+
+- create datawarehouse Realstate_dwh
+- create database Realstate_db
+- create schemas 
+    - raw_data schema to load the data from the csv files [datasets](./Dataset/)
+    - staging schema to use it as staging layer to load the data befor transform it [staging](./models/staging)
+    - snapshot schema to use it to implement slowlely changing dimension type 2 (historical) (SCD 2) [snapshots](./snapshots)
+    - analtycal schema to load the transformed dimensions and fact tables [warehouse](./models/warehouse)
+
+![Data Model](./Images/dbt-lineage_vs.png)
+
+### Final Project
+
+using dbt commands 
+- dbt run to run the project
+- dbt snapshot to take a snapshot of the project 
+- dbt test to apply tests wrote in tests folder [tests](./tests)
+- dbt docs generate to generate documentation 
+- dbt docs serve --port 8083 to generate documentation on the dbt web page
+
+![web page](./Images/dbt_web.png)
+
+### project lineage
+
+ ![web page](./Images/dbt-lineage.png)
+
+
+### Final Dashboard on Tableau public
+
+[Open Tableau Dashboard](https://public.tableau.com/shared/D4NPZYZ3D?:display_count=n&:origin=viz_share_link)
 
 
 
 
-
-
-### Using the starter project
-
-Try running the following commands:
-- dbt run
-- dbt test
-
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
