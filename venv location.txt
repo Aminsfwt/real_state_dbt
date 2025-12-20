@@ -1,0 +1,31 @@
+venv location:
+
+cd E:\'ITI Data Visualization Track'\'Data Science'\DBT\Codes\snowflake_wh
+
+venv Activation:
+
+./dbt-env/Scripts/Activate.ps1
+
+---------------------------------------------------------------------------------------
+## Git COMMANDS
+
+git remote add origin https://github.com/Aminsfwt/real_state_dbt.git
+
+git remote --v
+
+git add .
+
+git commit -m "add my project"
+
+git push
+
+git push --set-upstream origin main
+
+-------------------------------------------------------------------------------------
+project location
+
+cd E:\'ITI Data Visualization Track'\'Data Science'\DBT\Datacamp\Realestae_project\real_estate_snowflake
+
+snowflake acount
+amin
+@Engeleccomamin9999
