@@ -1,8 +1,8 @@
-venv location:
+## venv location:
 
 cd E:\'ITI Data Visualization Track'\'Data Science'\DBT\Codes\snowflake_wh
 
-venv Activation:
+## venv Activation:
 
 ./dbt-env/Scripts/Activate.ps1
 
@@ -11,15 +11,15 @@ venv Activation:
 
 git remote add origin https://github.com/Aminsfwt/real_state_dbt.git
 
-git remote --v
+git remote --v   # to show the remote repos
 
-git add .
+git add .   # add all the files in stageing
 
-git commit -m "add my project"
+git commit -m "add my project"   # add all the files in repo
 
-git push
+git push 'URL'  # add all the files in GitHub repo
 
-git push --set-upstream origin main
+git push --set-upstream origin main 
 
 -------------------------------------------------------------------------------------
 project location
