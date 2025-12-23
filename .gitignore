@@ -3,4 +3,4 @@ target/
 dbt_packages/
 logs/
 dbt_internal_packages/
-venv location.txt
+real_estate_snowflake/'venv location.txt'

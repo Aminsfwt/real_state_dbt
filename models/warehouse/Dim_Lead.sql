@@ -12,7 +12,10 @@ WITH dim_leads AS
         num_calls,
         lead_status,
         lead_source,
-        purchased,
+        CASE 
+            WHEN purchased = TRUE THEN 1
+            ELSE 0
+        END AS purchased,
         agent_id,
         campaign_id,
         min_budget,

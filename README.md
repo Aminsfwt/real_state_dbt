@@ -1,6 +1,10 @@
 
+## End-to-End Data Pipeline AWS S3 to Snowflake to Tableau
 
-## Real Estate Sales and Leads Analytics Data Warehouse 
+#### load csv data files into AWS S3 Bucket and use dbt tool to transform and load data into snowflake cloud data warehouse.
+![pipline](./Images/End-to-End%20Data%20Pipeline%20AWS%20S3%20to%20Snowflake%20to%20Tableau.png)
+
+#### Real Estate Sales and Leads Analytics Data Warehouse
 
 This project unlocks the power of advanced analytics and reporting by transforming an OLTP architecture into an efficient OLAP system. It Leverages the capabilities of DBT and Snowflake to implement dimensional modelling and drive data-driven decision-making.
 
@@ -102,6 +106,10 @@ using dbt commands
 
 [Open Tableau Dashboard](https://public.tableau.com/shared/D4NPZYZ3D?:display_count=n&:origin=viz_share_link)
 
-
+## Used Tools
+- AWS S3 Bucket to store source data into cloud
+- Snowflake cloud data warehouse to store the data warehouse
+- dbt tool to clean and transform data into the datawarehouse
+- Tableau to create dashboard and story to viisualize the data
 
 

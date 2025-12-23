@@ -1,0 +1,28 @@
+USE DATABASE EGYPT_REAL_ESTATE_DB;
+
+-- create stage into raw_data schema
+CREATE STAGE aws_s3_src
+URL = 's3://realestate-source'  -- s3 data url
+CREDENTIALS=(AWS_KEY_ID='*****' AWS_SECRET_KEY='****'); -- IAM User CREDENTIALS 
+
+--Load data into tables
+COPY INTO AGENT
+FROM '@aws_s3_src/agents.csv'
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+
+COPY INTO LEAD
+FROM '@aws_s3_src/leads.csv'
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+
+COPY INTO MARKETING_CAMPAIGN
+FROM '@aws_s3_src/marketing_campaigns.csv'
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+
+COPY INTO PROPERTIES
+FROM '@aws_s3_src/properties.csv'
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+
+COPY INTO TRANSACTIONS
+FROM '@aws_s3_src/transations.csv'
+FILE_FORMAT = (TYPE = 'CSV' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '"');
+
