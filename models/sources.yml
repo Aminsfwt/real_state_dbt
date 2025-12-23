@@ -2,11 +2,11 @@ version: 2
 
 sources:
   - name: RAW_DATA
-    database: Realestate_DB
+    database: EGYPT_REAL_ESTATE_DB
     schema: RAW_DATA
     tables:
-      - name: agents
-      - name: leads
-      - name: marketing_campaigns
+      - name: agent
+      - name: lead
+      - name: marketing_campaign
       - name: properties 
       - name: transactions

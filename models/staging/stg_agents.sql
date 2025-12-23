@@ -12,7 +12,7 @@ with agent_src AS(
         ROUND(commission_rate,3) AS commission_rate,
         hire_date,
         experience_years
-    FROM {{source('RAW_DATA', 'agents')}}
+    FROM {{source('RAW_DATA', 'agent')}}
 )
 
 select * FROM agent_src      

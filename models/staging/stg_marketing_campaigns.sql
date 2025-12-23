@@ -15,7 +15,7 @@ with campaigns_src AS(
         campaign_status,
         target_leads_nums
 
-    FROM {{source('RAW_DATA', 'marketing_campaigns')}}
+    FROM {{source('RAW_DATA', 'marketing_campaign')}}
 )
 
 select * 

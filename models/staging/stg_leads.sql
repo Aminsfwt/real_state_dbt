@@ -17,7 +17,7 @@ WITH leads_src AS(
         min_budget,
         max_budget
 
-    FROM {{source('RAW_DATA','leads')}}
+    FROM {{source('RAW_DATA','lead')}}
 ) 
 
 select *
