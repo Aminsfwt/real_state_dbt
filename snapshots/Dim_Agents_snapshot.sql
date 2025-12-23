@@ -4,7 +4,7 @@
 
 {{
     config(
-        target_database='Realestate_DB',
+        target_database='EGYPT_REAL_ESTATE_DB',
         target_schema='snapshots',
         unique_key='agent_id',
         strategy='check',
