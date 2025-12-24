@@ -12,10 +12,7 @@ WITH dim_leads AS
         num_calls,
         lead_status,
         lead_source,
-        CASE 
-            WHEN purchased = TRUE THEN 1
-            ELSE 0
-        END AS purchased,
+        purchased,
         agent_id,
         campaign_id,
         min_budget,
@@ -30,6 +27,8 @@ WITH dim_leads AS
 )
 
 select 
-    ROW_NUMBER() OVER (ORDER BY lead_id) AS lead_key,
+    ROW_NUMBER() OVER (
+        ORDER BY TO_NUMBER(REGEXP_SUBSTR(lead_id, '^[0-9]+'))
+    ) lead_key,
     *
 FROM dim_leads    

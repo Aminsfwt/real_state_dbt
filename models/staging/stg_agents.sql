@@ -2,7 +2,7 @@
 
 with agent_src AS(
     SELECT
-        SUBSTRING(agent_id,1, CHARINDEX('_', agent_id || '_') - 1) AS agent_id,
+        TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
         agent_name,
         phone,
         email,

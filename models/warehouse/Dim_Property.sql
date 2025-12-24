@@ -30,6 +30,9 @@ WITH dim_property AS
 )
 
 select 
-    ROW_NUMBER() OVER (ORDER BY property_id) AS property_key,
+    ROW_NUMBER() OVER 
+    (
+        ORDER BY TO_NUMBER(REGEXP_SUBSTR(property_id, '^[0-9]+'))
+    ) AS property_key,
     *
 FROM dim_property    

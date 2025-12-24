@@ -2,7 +2,7 @@
 WITH properties_src AS(
 
     SELECT 
-        property_id,
+        TO_NUMBER(REGEXP_REPLACE(property_id, '\\D', '')) AS property_id,
         governorate,
         governorate_lat,
         governorate_lon,
@@ -17,7 +17,7 @@ WITH properties_src AS(
         property_price,
         selling_price,
         renovation_cost,
-        SUBSTRING(agent_id,1, CHARINDEX('_', agent_id || '_') - 1) AS agent_id,
+        TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
         availability_status
 
     FROM {{source('RAW_DATA', 'properties')}}
