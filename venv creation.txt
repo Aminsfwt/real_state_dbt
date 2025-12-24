@@ -1,6 +1,6 @@
-## venv location:
+## vertual ennironment cretion:
 
-cd E:\'ITI Data Visualization Track'\'Data Science'\DBT\Codes\snowflake_wh
+python -m venv venv
 
 ## venv Activation:
 
@@ -22,10 +22,5 @@ git push 'URL'  # add all the files in GitHub repo
 git push --set-upstream origin main 
 
 -------------------------------------------------------------------------------------
-project location
 
-cd E:\'ITI Data Visualization Track'\'Data Science'\DBT\Datacamp\Realestae_project\real_estate_snowflake
 
-snowflake acount
-amin
-@Engeleccomamin9999
