@@ -1,3 +1,5 @@
+
+
 WITH fact_sales AS (
     SELECT DISTINCT
         t.transaction_id,

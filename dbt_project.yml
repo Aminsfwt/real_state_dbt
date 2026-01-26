@@ -44,7 +44,7 @@ models:
 
     warehouse:
       +database: EGYPT_REAL_ESTATE_DB
-      +schema: analtycal_data
+      +schema: ANALTYCAL_DATA
       +materialized: table 
 
 

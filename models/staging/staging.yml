@@ -90,12 +90,14 @@ models:
                   to: "{{ ref('stg_leads') }}"
                   field: lead_id
         - name: property_id
-          description: "Foreign key to marketing_campaign table"
+          description: "Foreign key to properties table"
           tests:
             - relationships:
                 arguments:
                   to: "{{ ref('stg_properties') }}"
                   field: property_id
+                config:
+                  where: "property_id IS NOT NULL"
         - name: agent_id
           description: "Foreign key to agents table"
           tests:
@@ -103,5 +105,7 @@ models:
                 arguments:
                   to: "{{ ref('stg_agents') }}"
                   field: agent_id
+                config:
+                  where: "agent_id IS NOT NULL"
 
       

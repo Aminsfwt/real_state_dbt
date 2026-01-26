@@ -1,3 +1,5 @@
+
+
 WITH agents AS (
     SELECT 
         agent_id,
@@ -10,8 +12,8 @@ WITH agents AS (
         ROUND(commission_rate,3) AS commission_rate,
         hire_date,
         experience_years,
-        dbt_valid_from AS strt_date,
-        dbt_valid_to   AS ed_date,
+        dbt_valid_from AS start_date,
+        dbt_valid_to   AS end_date,
         CASE WHEN dbt_valid_to IS NULL THEN 1 ELSE 0 END AS is_current
     FROM {{ ref('Dim_Agents_snapshot') }}
 ),

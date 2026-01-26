@@ -15,6 +15,7 @@ with agent_src AS(
     FROM {{source('RAW_DATA', 'agent')}}
 )
 
-select * FROM agent_src      
-
-    
+select 
+    * 
+FROM agent_src      
+   

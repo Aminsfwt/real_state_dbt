@@ -1,4 +1,5 @@
 
+
 WITH leads_src AS(
     SELECT 
         TO_NUMBER(REGEXP_REPLACE(lead_id, '\\D', '')) as lead_id,
@@ -20,5 +21,7 @@ WITH leads_src AS(
     FROM {{source('RAW_DATA','lead')}}
 ) 
 
-select *
+select 
+    *
 from leads_src
+

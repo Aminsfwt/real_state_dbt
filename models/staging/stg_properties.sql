@@ -1,6 +1,5 @@
 
 WITH properties_src AS(
-
     SELECT 
         TO_NUMBER(REGEXP_REPLACE(property_id, '\\D', '')) AS property_id,
         governorate,
