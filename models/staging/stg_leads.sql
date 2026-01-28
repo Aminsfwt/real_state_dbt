@@ -2,7 +2,8 @@
 
 WITH leads_src AS(
     SELECT 
-        TO_NUMBER(REGEXP_REPLACE(lead_id, '\\D', '')) as lead_id,
+        lead_id,
+        --TO_NUMBER(REGEXP_REPLACE(lead_id, '\\D', '')) as lead_id,
         lead_name,
         phone,
         mail,
@@ -13,8 +14,10 @@ WITH leads_src AS(
         lead_status,
         lead_source,
         purchased,
-        TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
-        TO_NUMBER(REGEXP_REPLACE(campaign_id, '\\D', '')) AS campaign_id,
+        agent_id,
+        campaign_id,
+        --TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
+        --TO_NUMBER(REGEXP_REPLACE(campaign_id, '\\D', '')) AS campaign_id,
         min_budget,
         max_budget
 

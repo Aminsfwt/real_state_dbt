@@ -2,7 +2,8 @@
 
 with agent_src AS(
     SELECT
-        TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
+        agent_id,
+        --TO_NUMBER(REGEXP_REPLACE(agent_id, '\\D', '')) AS agent_id,
         agent_name,
         phone,
         email,

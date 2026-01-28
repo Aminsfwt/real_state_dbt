@@ -4,3 +4,9 @@ dbt_packages/
 logs/
 dbt_internal_packages/
 real_estate_snowflake/'venv location.txt'
+.env
+.env.local
+*.env
+dbt_project.yml
+real_estate_snowflake/venv\ location.txt
+venv/
