@@ -7,9 +7,15 @@ models:
       columns:
         - name: agent_id
           description: ID and primary key of the table
-          data_tests:
+          tests:
             - not_null
             - unique 
+
+        - name: commission_rate
+          description: commission taken by agents
+          tests:
+            - not_null
+            - agent_commission
 
   ## marketing_campaigns
     - name: stg_marketing_campaigns 
@@ -17,12 +23,12 @@ models:
       columns:
         - name: campaign_id
           description: ID and primary key of the table
-          data_tests:
+          tests:
             - not_null
             - unique
         - name: marketing_channel 
           description: all marketing channels
-          data_tests:
+          tests:
             - accepted_values:
                 arguments:
                   values: ['Print','SMS','Events','Offline','Partnerships','Radio','TV','Email','Online','Social Media']            
@@ -33,12 +39,12 @@ models:
       columns: 
         - name: lead_id  
           description: ID and primary key of the table
-          data_tests:
+          tests:
             - not_null
             - unique
         - name: purchased  
           description: flag to specify if the lead converted to cusstomer or not  
-          data_tests:
+          tests:
             - accepted_values:
                 arguments:
                   values: ['yes', 'no']
@@ -63,12 +69,12 @@ models:
       columns:
         - name: property_id
           description: ID and primary key of the table
-          data_tests:
+          tests:
             - not_null
             - unique
         - name: availability_status
           description: properity status
-          data_tests:
+          tests:
             - accepted_values:
                 arguments:
                   values: ['Available', 'Sold']
@@ -79,12 +85,12 @@ models:
       columns: 
         - name: transaction_id  
           description: ID and primary key of the table
-          data_tests:
+          tests:
             - not_null
             - unique
         - name: customer_id  
           description: "Foreign key to leads table"
-          data_tests:
+          tests:
             - relationships:
                 arguments:
                   to: "{{ ref('stg_leads') }}"

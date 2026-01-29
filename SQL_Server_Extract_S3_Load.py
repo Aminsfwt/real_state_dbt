@@ -1,7 +1,3 @@
-"""
-SQL Server to S3 Data Load Script
-Reads all tables from SQL Server and uploads them as CSV files to AWS S3
-"""
 
 import pyodbc
 import pandas as pd
@@ -10,7 +6,7 @@ import io
 from dotenv import load_dotenv
 import os
 
-# --- CONFIGURATION ---
+# SQL CONFIGURATION 
 SQL_CONFIG = {
     'driver': '{ODBC Driver 18 for SQL Server}',
     'server': os.getenv('SQL_SERVER'), 
@@ -19,6 +15,7 @@ SQL_CONFIG = {
     'password': os.getenv('SQL_PASSWORD')
 }
 
+# S3 CONFIGURATION 
 S3_CONFIG = {
     'bucket': os.getenv('AWS_BUCKET'),
     'aws_access_key': os.getenv('AWS_ACCESS_KEY'),
@@ -73,10 +70,10 @@ def upload_all_tables():
                 Body=csv_content
             )
             
-            print(f"Uploaded {full_table_name} to s3://{S3_CONFIG['bucket']}/{s3_key}")
+            print(f"{full_table_name} in the bucket")
         
         conn.close()
-        print("\n All tables uploaded successfully!")
+        print("\n All tables in the bucket")
         
     except pyodbc.Error as e:
         print(f"Database connection error: {e}")
